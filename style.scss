@@ -1,0 +1,34 @@
+ 
+@import 'bootstrap/scss/bootstrap';
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+
+#sidebar{
+  ul{
+    list-style-type: none;
+    padding-left: 0;
+  }
+  .sidebar-spacer{
+    height: 2rem;
+  }
+  .sidebar-link{
+    display: block;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: .5rem;
+  }
+  .sidebar-link:hover, .sidebar-link.active{
+    background-color: gray;
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  #sidebar {
+    width: 40%;
+    position: fixed;
+    transition: .5s;
+    transform: translateX(-100%);
+    &.show{
+      transform: translateX(0);
+    }
+  }
+}
